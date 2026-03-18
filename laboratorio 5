@@ -1,0 +1,102 @@
+#include <stdio.h>
+#include<math.h>
+
+int main()
+{
+  float radio,altura,area,volumen,suma;
+  const float PI=3.1416;
+   printf("CALCULO DE GEOMETRIA DEL CILINDRO\n");
+  printf("ingrese el valor del radio(r)");
+  scanf("%f",&radio);
+  printf("Ingrese el valor de la altura(h)");
+  scanf("%f",&altura);
+  area=2*PI*radio*altura;
+  volumen=PI*pow(radio,2)*altura;
+  suma=area+volumen;
+   printf("RESULTADOS CALCULADOS:\n");
+   printf("-------------------------------------\n");
+  printf("Radio ingresado: %.2f\n",radio);
+  printf("Altura ingresado: %.2f\n",altura);
+   printf("-------------------------------------\n");
+  printf("Area lateral:%.4f\ unidades cuadradas\n",area);
+  printf("volumen:  %.4f\n unidades cubicas\n",volumen);
+   printf("suma del volumen y radio es: %.4f\n ",suma);
+  
+    return 0;
+}
+#include <stdio.h>
+
+int main()
+{
+    float x,y,z,examen,proyecto;
+    float laboratorio,teorico,final,nota;
+
+    printf("CALCULO DE NOTAS\n");
+
+    printf("INGRESE LA NOTA DE SU PRIMER LABORATORIO\n");
+    scanf("%f",&x);
+
+    printf("INGRESE LA NOTA DE SU SEGUNDO LABORATORIO\n");
+    scanf("%f",&y);
+
+    printf("INGRESE LA NOTA DE SU TERCER LABORATORIO\n");
+    scanf("%f",&z);
+
+    laboratorio=((x+y+z)/3)*0.45;
+
+    printf("INGRESE LA NOTA DE SU EXAMEN TEORICO\n");
+    scanf("%f",&examen);
+    teorico=examen*0.35;
+
+    printf("INGRESE LA NOTA DE SU PROYECTO FINAL\n");
+    scanf("%f",&proyecto);
+    final=proyecto*0.20;
+
+    nota=laboratorio+teorico+final;
+
+    printf("Su nota es: %.2f\n",nota);
+
+    return 0;
+}
+#include <stdio.h>
+
+int main()
+{
+    float x,y,z,examen,proyecto;
+    float laboratorio,teorico,final,nota;
+
+    printf("CALCULO DE NOTAS\n");
+
+    printf("INGRESE LA NOTA DE SU PRIMER LABORATORIO\n");
+    scanf("%f",&x);
+
+    printf("INGRESE LA NOTA DE SU SEGUNDO LABORATORIO\n");
+    scanf("%f",&y);
+
+    printf("INGRESE LA NOTA DE SU TERCER LABORATORIO\n");
+    scanf("%f",&z);
+
+    laboratorio=((x+y+z)/3)*0.45;
+
+    printf("INGRESE LA NOTA DE SU EXAMEN TEORICO\n");
+    scanf("%f",&examen);
+    teorico=examen*0.35;
+
+    printf("INGRESE LA NOTA DE SU PROYECTO FINAL\n");
+    scanf("%f",&proyecto);
+    final=proyecto*0.20;
+
+    nota=laboratorio+teorico+final;
+    printf("LOS DATOS REGISTRADOS SON:\n");
+    printf("-----------------------------------\n");
+    printf("nota del laboraotiro uno: %4f\n",x);
+    printf("nota del laboraotiro dos: %4f\n",y);
+    printf("nota del laboraotiro tres: %4f\n",z);
+    printf("nota del examen teorico: %4f\n",examen);
+     printf("nota del proyecto final: %4f\n",proyecto);
+
+
+    printf("Su nota es: %.2f\n",nota);
+
+    return 0;
+}
