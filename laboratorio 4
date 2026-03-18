@@ -1,0 +1,102 @@
+#include <stdio.h>
+
+int main()
+{
+    char nombre[50],carrera[50];
+    int semestre,edad;
+    printf("Ingrese el nombre del estudiante");
+    scanf("%s",nombre);
+    printf("Ingrese la edad del estudiante");
+    scanf("%d",&edad);
+    printf("Ingrese la carrera del estudiante");
+    scanf("%s",carrera);
+    printf("Ingrese el semestre del estudiante");
+    scanf("%d",&semestre);
+    printf("LOS DATOS DEL ESTUDIANTE SON :");
+    printf("NOMBRE:%s\n",nombre);
+    printf("edad:%d\n",edad);
+    printf("CARRERA:%s\n",carrera);
+    printf("SEMESTRE:%d\n",semestre);
+
+    return 0;
+}
+Algoritmo DatosDelEstudiante
+	escribir"Ingrese nombre del estudiante"
+	leer nombre
+	escribir"Ingrese la edad del estudiante"
+	leer edad
+	escribir"ingresar carrera del estudiante"
+	leer carrera
+	escribir"Ingrese el semestre del estudiante"
+	leer semestre
+	escribir"LOS DATOS DEL ESTUDIANTE"
+	escribir"Su nombre del estudiante es:",nombre
+	escribir"Su edad del estudiante es:",edad
+	escribir"Su carrera del estudiante es:",carrera
+	escribir"El semestre del estudiante es:",semestre
+	
+	
+	
+FinAlgoritmo
+
+Algoritmo Datos
+	definir nombre como caracter
+	definir cantidad,total  como entero
+	escribir"Ingrese nombre del cliente"
+	leer nombre
+	escribir"Ingrese la cantidad de productos"
+	leer cantidad
+	total<-cantidad*8
+
+	
+	escribir"el total a pagar es:",total
+	
+	
+FinAlgoritmo
+
+#include <stdio.h>
+
+int main()
+{
+    char nombre[50];
+    int cantidad,total;
+    printf("Ingrese el nombre del cliente");
+    scanf("%s",nombre);
+    printf("Ingrese la cantidad del producto");
+    scanf("%d",&cantidad);
+   total=cantidad*8;
+    printf("el total de su compra es:%d\n",total);
+    
+    return 0;
+}
+
+Algoritmo AreaDelTriangulo
+	definir base,altura,area como entero
+	escribir"La base"
+	leer base
+	escribir"Ingrese la altura"
+	leer altura
+	area<-(base*altura)/2
+
+	
+	escribir"el area del triangulo es:",area
+	
+	
+FinAlgoritmo
+#include <stdio.h>
+
+int main()
+{
+  
+    int base,altura,area;
+    printf("Ingrese la base del triangulo");
+    scanf("%d",&base);
+    printf("Ingrese la altura del triangulo");
+    scanf("%d",&altura);
+   area=(base*altura)/2;
+    printf("el area del triangulo es:%d\n",area);
+    
+    return 0;
+}
+
+
