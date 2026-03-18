@@ -1,0 +1,44 @@
+#include <stdio.h>
+
+int main()
+{
+    char nombre[50], apellido[50], carrera[50];
+    int semestre;
+
+    printf("Ingrese el nombre del estudiante: ");
+    scanf("%s", nombre);
+
+    printf("Ingrese el apellido del estudiante: ");
+    scanf("%s", apellido);
+
+    printf("Ingrese la carrera del estudiante: ");
+    scanf("%s", carrera);
+
+    printf("Ingrese el semestre del estudiante: ");
+    scanf("%d", &semestre);
+
+    printf("Los datos del estudiante son:");
+    printf("Nombre: %s\n", nombre);
+    printf("Apellido: %s\n", apellido);
+    printf("Carrera: %s\n", carrera);
+    printf("Semestre: %d\n", semestre);
+
+    return 0;
+}
+Algoritmo informacion 
+	definir nombre,apellido,carrera,semestre como caracter
+	escribir"NOMBRE DEL ESTUDIANTE"
+	leer nombre
+	escribir"INGRESE APELLIDOS DEL ESTUDIANTES"
+	leer apellido
+	escribir "INGRESE LA CARRERA QUE ESTUDIA"
+	leer carrera
+	escribir "INGRESE EL SEMESTRE"
+	leer semestre
+	
+	escribir"los datos del estudiante :" 
+	escribir"NOMBRE DEL ESTUDIANTE:",nombre
+	escribir" APELLIDOS DEL ESTUDIANTES:",apellido
+	escribir " LA CARRERA QUE ESTUDIA:",carrera
+	escribir " EL SEMESTRE:",semestre
+FinAlgoritmo
