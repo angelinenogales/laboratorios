@@ -1,0 +1,103 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+
+    float a, b, resultado;
+    int opcion;
+
+    cout << "Ingrese dos numeros: ";
+    cin >> a >> b;
+
+    cout << "\nSeleccione operacion:" << endl;
+    cout << "1. Suma" << endl;
+    cout << "2. Resta" << endl;
+    cout << "3. Multiplicacion" << endl;
+    cout << "4. Division" << endl;
+
+    cout << "Opcion: ";
+    cin >> opcion;
+
+    switch(opcion) {
+
+        case 1:
+            resultado = a + b;
+            cout << "Resultado: " << resultado << endl;
+            break;
+
+        case 2:
+            resultado = a - b;
+            cout << "Resultado: " << resultado << endl;
+            break;
+
+        case 3:
+            resultado = a * b;
+            cout << "Resultado: " << resultado << endl;
+            break;
+
+        case 4:
+
+            if(b == 0) {
+                cout << "Error: no se puede dividir entre cero" << endl;
+            } else {
+                resultado = a / b;
+                cout << "Resultado: " << resultado << endl;
+            }
+
+            break;
+
+        default:
+            cout << "Opcion invalida" << endl;
+    }
+
+    return 0;
+}
+
+##pregunta 2
+#include <iostream>
+using namespace std;
+
+int main() {
+
+    int dia;
+
+    cout << "Ingrese un numero del 1 al 7: ";
+    cin >> dia;
+
+    switch(dia) {
+
+        case 1:
+            cout << "Lunes - Dia laboral" << endl;
+            break;
+
+        case 2:
+            cout << "Martes - Dia laboral" << endl;
+            break;
+
+        case 3:
+            cout << "Miercoles - Dia laboral" << endl;
+            break;
+
+        case 4:
+            cout << "Jueves - Dia laboral" << endl;
+            break;
+
+        case 5:
+            cout << "Viernes - Dia laboral" << endl;
+            break;
+
+        case 6:
+            cout << "Sabado - Fin de semana" << endl;
+            break;
+
+        case 7:
+            cout << "Domingo - Fin de semana" << endl;
+            break;
+
+        default:
+            cout << "Numero invalido" << endl;
+
+    }
+
+    return 0;
+}
