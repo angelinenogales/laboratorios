@@ -1,0 +1,143 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+
+    int numero, digito;
+    int suma = 0, contador = 0, mayores5 = 0;
+    float promedio;
+
+    cout << "Ingrese el numero que representa el uso de aplicaciones: ";
+    cin >> numero;
+
+    while(numero > 0) {
+
+        digito = numero % 10;
+
+        suma = suma + digito;
+        contador++;
+
+        if(digito > 5) {
+            mayores5++;
+        }
+
+        numero = numero / 10;
+    }
+
+    if(contador > 0) {
+        promedio = (float)suma / contador;
+    } else {
+        promedio = 0;
+    }
+
+    cout << "\nTotal de horas: " << suma << endl;
+    cout << "Aplicaciones con mas de 5 horas: " << mayores5 << endl;
+    cout << "Promedio de horas: " << promedio << endl;
+
+    return 0;
+}
+##pregunta 2
+#include <iostream>
+using namespace std;
+
+int main() {
+
+    int numero, digito;
+    int maximo, minimo;
+    int contadorMax = 0;
+
+    cout << "Ingrese el numero que representa el consumo diario: ";
+    cin >> numero;
+
+    // Inicializar con el primer digito
+    digito = numero % 10;
+    maximo = digito;
+    minimo = digito;
+    contadorMax = 1;
+
+    numero = numero / 10;
+
+    while(numero > 0) {
+
+        digito = numero % 10;
+
+        // Maximo
+        if(digito > maximo) {
+            maximo = digito;
+            contadorMax = 1;
+        }
+        else if(digito == maximo) {
+            contadorMax++;
+        }
+
+        // Minimo
+        if(digito < minimo) {
+            minimo = digito;
+        }
+
+        numero = numero / 10;
+    }
+
+    cout << "\nMayor consumo (maximo): " << maximo << " GB" << endl;
+    cout << "Menor consumo (minimo): " << minimo << " GB" << endl;
+    cout << "Repeticiones del maximo: " << contadorMax << endl;
+
+    return 0;
+}
+##pregunta 3
+#include <iostream>
+using namespace std;
+
+int main() {
+
+    int pin, copia, digito, anterior;
+    int intentos = 0;
+    bool valido;
+
+    while(intentos < 3) {
+
+        valido = true;
+
+        cout << "Ingrese su PIN de 4 digitos: ";
+        cin >> pin;
+
+        copia = pin;
+
+        int cantidad = 0;
+        anterior = -1;
+
+        while(copia > 0) {
+
+            digito = copia % 10;
+            cantidad++;
+
+            if(digito == anterior) {
+                valido = false;
+            }
+
+            anterior = digito;
+            copia = copia / 10;
+        }
+
+        if(cantidad != 4) {
+            valido = false;
+        }
+
+        if(valido) {
+
+            cout << "PIN valido" << endl;
+            return 0;
+
+        } else {
+
+            cout << "PIN invalido" << endl;
+            intentos++;
+
+        }
+
+    }
+
+    cout << "Cuenta bloqueada" << endl;
+
+    return 0;
+}
