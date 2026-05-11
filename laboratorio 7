@@ -1,0 +1,100 @@
+#include <iostream>
+using namespace std;
+
+int esPrimo(int n) {
+
+    if(n < 2) return 0;
+
+    for(int i = 2; i * i <= n; i++) {
+
+        if(n % i == 0) return 0;
+
+    }
+
+    return 1;
+}
+
+int siguientePrimo(int n) {
+
+    do {
+        n++;
+    } while(!esPrimo(n));
+
+    return n;
+}
+
+int main() {
+
+    int n;
+    long long f0 = 1, f1 = 1, fn;
+    int primo = 2;
+
+    cout << "Ingrese la cantidad de terminos: ";
+    cin >> n;
+
+    cout << "\nSerie:" << endl;
+
+    for(int i = 1; i <= n; i++) {
+
+        if(i == 1) {
+
+            fn = f0;
+
+        } else if(i == 2) {
+
+            fn = f1;
+
+        } else {
+
+            fn = f0 + f1;
+            f0 = f1;
+            f1 = fn;
+
+        }
+
+        // asegurar denominador primo
+        if(i > 1) {
+            primo = siguientePrimo(primo);
+        }
+
+        cout << fn << "/" << primo << endl;
+    }
+
+    return 0;
+}
+##pregunta 2
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main() {
+
+    float x, resultado = 1;
+    int n;
+
+    cout << "Ingrese el valor de x: ";
+    cin >> x;
+
+    cout << "Ingrese la cantidad de terminos n: ";
+    cin >> n;
+
+    long long factorial;
+    int exponente;
+
+    for(int i = 1; i < n; i++) {
+
+        exponente = 2 * i;   // 2, 4, 6, 8...
+
+        factorial = 1;
+
+        for(int j = 1; j <= exponente; j++) {
+            factorial = factorial * j;
+        }
+
+        resultado = resultado + (pow(x, exponente) / factorial);
+    }
+
+    cout << "\nAproximacion de cosh(" << x << ") = " << resultado << endl;
+
+    return 0;
+}
