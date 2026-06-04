@@ -1,0 +1,148 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+// Función para leer datos
+void leerDatos(float &x, float &y)
+{
+    cout << "Ingrese la base: ";
+    cin >> x;
+
+    cout << "Ingrese el exponente: ";
+    cin >> y;
+}
+
+// Función POTEN
+float POTEN(float x, float y)
+{
+    return pow(x, y);
+}
+
+// Función para mostrar resultado
+void mostrarResultado(float resultado)
+{
+    cout << "Resultado: " << resultado;
+}
+
+int main()
+{
+    float x, y, resultado;
+
+    leerDatos(x, y);
+
+    resultado = POTEN(x, y);
+
+    mostrarResultado(resultado);
+
+    return 0;
+}
+# pregunta 2
+#include <iostream>
+#include <string>
+using namespace std;
+
+// Función para leer fecha
+void leerFecha(int &dia, int &mes, int &anio)
+{
+    cout << "Ingrese el dia: ";
+    cin >> dia;
+
+    cout << "Ingrese el mes: ";
+    cin >> mes;
+
+    cout << "Ingrese el año: ";
+    cin >> anio;
+}
+
+// Procedimiento LITERAL
+string LITERAL(int dia, int mes, int anio)
+{
+    string nombreMes;
+
+    switch(mes)
+    {
+        case 1: nombreMes = "Enero"; break;
+        case 2: nombreMes = "Febrero"; break;
+        case 3: nombreMes = "Marzo"; break;
+        case 4: nombreMes = "Abril"; break;
+        case 5: nombreMes = "Mayo"; break;
+        case 6: nombreMes = "Junio"; break;
+        case 7: nombreMes = "Julio"; break;
+        case 8: nombreMes = "Agosto"; break;
+        case 9: nombreMes = "Septiembre"; break;
+        case 10: nombreMes = "Octubre"; break;
+        case 11: nombreMes = "Noviembre"; break;
+        case 12: nombreMes = "Diciembre"; break;
+    }
+
+    if(anio < 100)
+    {
+        anio = 1900 + anio;
+    }
+
+    return to_string(dia) + " de " + nombreMes +
+           " de " + to_string(anio);
+}
+
+// Mostrar resultado
+void mostrarFecha(string fechaLiteral)
+{
+    cout << "Fecha literal: " << fechaLiteral;
+}
+
+int main()
+{
+    int dia, mes, anio;
+    string fechaLiteral;
+
+    leerFecha(dia, mes, anio);
+
+    fechaLiteral = LITERAL(dia, mes, anio);
+
+    mostrarFecha(fechaLiteral);
+
+    return 0;
+}
+#pregunta 3
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+// Función para leer datos
+void leerDatos(float &R, int &n)
+{
+    cout << "Ingrese un numero real: ";
+    cin >> R;
+
+    cout << "Cantidad de decimales: ";
+    cin >> n;
+}
+
+// Función de redondeo
+float redondear(float R, int n)
+{
+    float factor = pow(10, n);
+
+    return round(R * factor) / factor;
+}
+
+// Mostrar resultado
+void mostrarResultado(float resultado)
+{
+    cout << "Numero redondeado: " << resultado;
+}
+
+int main()
+{
+    float R, resultado;
+    int n;
+
+    leerDatos(R, n);
+
+    resultado = redondear(R, n);
+
+    mostrarResultado(resultado);
+
+    return 0;
+}
+
