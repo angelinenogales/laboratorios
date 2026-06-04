@@ -1,0 +1,177 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int N;
+    
+    cout << "Cantidad de estudiantes: ";
+    cin >> N;
+    
+    float notas[N];
+    float suma = 0;
+    
+    for(int i = 0; i < N; i++)
+    {
+        do
+        {
+            cout << "Ingrese la nota del estudiante " << i + 1 << ": ";
+            cin >> notas[i];
+        }
+        while(notas[i] < 0 || notas[i] > 100);
+        
+        suma += notas[i];
+    }
+    
+    float mayor = notas[0];
+    float menor = notas[0];
+    
+    for(int i = 0; i < N; i++)
+    {
+        if(notas[i] > mayor)
+            mayor = notas[i];
+            
+        if(notas[i] < menor)
+            menor = notas[i];
+    }
+    
+    cout << "\nNOTAS REGISTRADAS\n";
+    
+    for(int i = 0; i < N; i++)
+    {
+        cout << notas[i] << " ";
+    }
+    
+    cout << "\nPromedio: " << suma / N;
+    cout << "\nNota mayor: " << mayor;
+    cout << "\nNota menor: " << menor;
+    
+    return 0;
+}
+#pregunta 2
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    string dias[7] = {
+        "Lunes",
+        "Martes",
+        "Miercoles",
+        "Jueves",
+        "Viernes",
+        "Sabado",
+        "Domingo"
+    };
+    
+    float ventas[7];
+    float total = 0;
+    
+    for(int i = 0; i < 7; i++)
+    {
+        cout << "Venta del " << dias[i] << ": ";
+        cin >> ventas[i];
+        
+        total += ventas[i];
+    }
+    
+    float promedio = total / 7;
+    
+    float mayor = ventas[0];
+    float menor = ventas[0];
+    
+    int posMayor = 0;
+    int posMenor = 0;
+    
+    for(int i = 1; i < 7; i++)
+    {
+        if(ventas[i] > mayor)
+        {
+            mayor = ventas[i];
+            posMayor = i;
+        }
+        
+        if(ventas[i] < menor)
+        {
+            menor = ventas[i];
+            posMenor = i;
+        }
+    }
+    
+    int superiores = 0;
+    
+    for(int i = 0; i < 7; i++)
+    {
+        if(ventas[i] > promedio)
+        {
+            superiores++;
+        }
+    }
+    
+    cout << "\n===== REPORTE SEMANAL =====\n";
+    cout << "Total vendido: " << total << endl;
+    cout << "Promedio de ventas: " << promedio << endl;
+    cout << "Mayor venta: " << dias[posMayor] << " (" << mayor << ")" << endl;
+    cout << "Menor venta: " << dias[posMenor] << " (" << menor << ")" << endl;
+    cout << "Dias con ventas superiores al promedio: " << superiores << endl;
+    
+    return 0;
+}
+#pregunta 3
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    float temp[15];
+    float suma = 0;
+    
+    for(int i = 0; i < 15; i++)
+    {
+        cout << "Temperatura del dia " << i + 1 << ": ";
+        cin >> temp[i];
+        
+        suma += temp[i];
+    }
+    
+    float mayor = temp[0];
+    float menor = temp[0];
+    
+    for(int i = 1; i < 15; i++)
+    {
+        if(temp[i] > mayor)
+            mayor = temp[i];
+            
+        if(temp[i] < menor)
+            menor = temp[i];
+    }
+    
+    float promedio = suma / 15;
+    
+    int mayorPromedio = 0;
+    int menorDiez = 0;
+    
+    for(int i = 0; i < 15; i++)
+    {
+        if(temp[i] > promedio)
+            mayorPromedio++;
+            
+        if(temp[i] < 10)
+            menorDiez++;
+    }
+    
+    cout << "\nTEMPERATURAS REGISTRADAS\n";
+    
+    for(int i = 0; i < 15; i++)
+    {
+        cout << temp[i] << " ";
+    }
+    
+    cout << "\n\nTemperatura maxima: " << mayor;
+    cout << "\nTemperatura minima: " << menor;
+    cout << "\nPromedio general: " << promedio;
+    cout << "\nDias con temperatura mayor al promedio: " << mayorPromedio;
+    cout << "\nDias con temperatura menor a 10 grados: " << menorDiez;
+    
+    return 0;
+}
