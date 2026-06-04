@@ -1,0 +1,96 @@
+#include <iostream>
+using namespace std;
+
+// Función que calcula la suma de 1 hasta N
+int sumaHastaN(int N)
+{
+    int suma = 0;
+
+    for(int i = 1; i <= N; i++)
+    {
+        suma = suma + i;
+    }
+
+    return suma;
+}
+
+int main()
+{
+    int N;
+
+    cout << "Ingrese un numero entero positivo: ";
+    cin >> N;
+
+    cout << "La suma de 1 hasta " << N << " es: " << sumaHastaN(N);
+
+    return 0;
+}
+#pregunta 2
+#include <iostream>
+using namespace std;
+
+// Función que solicita N valores y calcula el promedio
+float calcularPromedio(int N)
+{
+    float num, suma = 0;
+
+    for(int i = 1; i <= N; i++)
+    {
+        cout << "Ingrese valor " << i << ": ";
+        cin >> num;
+
+        suma = suma + num;
+    }
+
+    return suma / N;
+}
+
+int main()
+{
+    int N;
+
+    cout << "¿Cuantos valores desea ingresar?: ";
+    cin >> N;
+
+    float promedio = calcularPromedio(N);
+
+    cout << "El promedio es: " << promedio;
+
+    return 0;
+}
+#pregunta 3
+#include <iostream>
+using namespace std;
+
+// Función que cuenta los dígitos pares
+int contarPares(int numero)
+{
+    int digito;
+    int contador = 0;
+
+    while(numero > 0)
+    {
+        digito = numero % 10;
+
+        if(digito % 2 == 0)
+        {
+            contador++;
+        }
+
+        numero = numero / 10;
+    }
+
+    return contador;
+}
+
+int main()
+{
+    int numero;
+
+    cout << "Ingrese un numero entero positivo: ";
+    cin >> numero;
+
+    cout << "Cantidad de digitos pares: " << contarPares(numero);
+
+    return 0;
+}
